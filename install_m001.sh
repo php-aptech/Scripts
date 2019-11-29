@@ -2,6 +2,20 @@
 date=`date +%Y%m%d`
 dir=/root/Scripts
 
+######Install and Config Timezone
+VntimeZone()
+{
+yum install ntp
+rm -rf /etc/localtime;
+cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime;
+service ntpd stop;
+/usr/sbin/ntpdate 0.asia.pool.ntp.org;
+echo '50 * * * * /usr/sbin/ntpdate 0.asia.pool.ntp.org' >> /var/spool/cron/root
+echo 'CRON_TZ="Asia/Ho_Chi_Minh"
+TZ="ICT"' >> /etc/crontab
+service crond restart
+}
+
 ######Disable Selinux
 DropSelinux()
 {
@@ -51,6 +65,7 @@ echo "tKdVd#%GVfIp*1ey#&Wx" | passwd --stdin root
 ######################
 #	 Run Function	 #	
 ######################
+VntimeZone
 Change_Pass
 DropSelinux
 AddPortIptables
