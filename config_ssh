@@ -1,0 +1,42 @@
+Protocol 2
+ListenAddress 0.0.0.0:3122
+HostKey /etc/ssh/ssh_host_rsa_key
+#HostKey /etc/ssh/ssh_host_dsa_key
+SyslogFacility AUTHPRIV
+LogLevel INFO
+LoginGraceTime 2m
+AllowUsers root
+PermitRootLogin yes
+#PermitRootLogin without-password
+StrictModes yes
+MaxAuthTries 3
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys
+RhostsRSAAuthentication no
+HostbasedAuthentication no
+IgnoreUserKnownHosts no
+IgnoreRhosts yes
+PermitEmptyPasswords no
+PasswordAuthentication yes
+ChallengeResponseAuthentication no
+UsePAM yes
+AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
+AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
+AcceptEnv LC_IDENTIFICATION LC_ALL
+AllowTcpForwarding yes
+X11Forwarding no
+PrintMotd no
+PrintLastLog no
+TCPKeepAlive yes
+UseLogin no
+UsePrivilegeSeparation yes
+PermitUserEnvironment no
+Compression delayed
+ClientAliveInterval 0
+ClientAliveCountMax 3
+UseDNS no
+PidFile /var/run/sshd.pid
+MaxStartups 10
+PermitTunnel no
+Subsystem       sftp    /usr/libexec/openssh/sftp-server
