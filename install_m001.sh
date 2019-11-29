@@ -1,6 +1,6 @@
 #!bin/bass
 date='date +%d%m%Y'
-dir=root/Scripts/
+dir=root/Scripts
 DropSelinux()
 {
 echo "SELINUX=disabled" > /etc/selinux/config; echo "SELINUXTYPE=targeted" >> /etc/selinux/config; setenforce 0
