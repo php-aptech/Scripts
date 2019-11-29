@@ -1,6 +1,6 @@
 #!bin/bass
-date='date +%d%m%Y'
-dir=root/Scripts
+date=`date +%Y%m%d`
+dir=/root/Scripts
 DropSelinux()
 {
 echo "SELINUX=disabled" > /etc/selinux/config; echo "SELINUXTYPE=targeted" >> /etc/selinux/config; setenforce 0
@@ -22,9 +22,9 @@ Zabbix_Agent()
 rpm --import http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 rpm -ivh http://repo.zabbix.com/zabbix/3.2/rhel/6/x86_64/zabbix-release-3.2-1.el6.noarch.rpm
 yum install zabbix-agent -y
-cp /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf_$date
+cp /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf.$date
 echo > /etc/zabbix/zabbix_agentd.conf
-cp $dir/zabbix_agent.txt /etc/zabbix/zabbix_agentd.conf
+cp $dir/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
 service zabbix-agent start
 chkconfig zabbix-agent on
 }
