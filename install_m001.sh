@@ -5,7 +5,7 @@ dir=/root/Scripts
 ######Install and Config Timezone
 VntimeZone()
 {
-yum install ntp
+yum install ntp -y
 rm -rf /etc/localtime;
 cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime;
 service ntpd stop;
