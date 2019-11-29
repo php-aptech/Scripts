@@ -29,7 +29,7 @@ yum install zabbix-agent -y
 #cp /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf.$date
 echo > /etc/zabbix/zabbix_agentd.conf
 cp $dir/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf
-echo "Vui lòng nhập vào IP cần monitor: "
+echo "Vui long nhap IP Zabbix_Client can monitor: "
 read ip_zabbix
 echo "Hostname=$ip_zabbix" >> /etc/zabbix/zabbix_agentd.conf 
 service zabbix-agent start
