@@ -74,6 +74,7 @@ echo "tKdVd#%GVfIp*1ey#&Wx" | passwd --stdin root
 #	 Run Function	 #	
 ######################
 VntimeZone
+ConfigIptalbes
 Change_Pass
 DropSelinux
 AddPortIptables
