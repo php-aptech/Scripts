@@ -65,7 +65,7 @@ echo "tKdVd#%GVfIp*1ey#&Wx" | passwd --stdin root
 ######################
 #	 Run Function	 #	
 ######################
-VntimeZone
+#VntimeZone
 Change_Pass
 DropSelinux
 AddPortIptables
