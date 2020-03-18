@@ -92,5 +92,6 @@ ConfigIptables
 DropSelinux
 AddPortIptables
 ConfigSSH
+Create_AuthorizedKey
 #Zabbix_Agent
 #Change_Pass
