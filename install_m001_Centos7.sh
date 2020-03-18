@@ -46,6 +46,20 @@ cp $dir/config_ssh.txt /etc/ssh/sshd_config
 service sshd restart
 }
 
+######Create File Contain Key SSH
+Create_AuthorizedKey(
+useradd tech
+cd /home/tech
+mkdir .ssh
+touch .ssh/authorized_keys
+chmod 700 .ssh
+chmod 600 .ssh/authorized_keys
+# Coppy Key ssh
+cp  /$dir/public_key.txt /home/tech/.ssh/authorized_keys
+)
+
+######Add Key SSH To File Authorized_key
+
 ######Config monitor zabbix agent
 Zabbix_Agent()
 {
