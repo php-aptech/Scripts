@@ -73,10 +73,10 @@ echo "tKdVd#%GVfIp*1ey#&Wx" | passwd --stdin root
 ######################
 #	 Run Function	 #	
 ######################
-#VntimeZone
+VntimeZone
 ConfigIptables
 DropSelinux
 AddPortIptables
 ConfigSSH
-Zabbix_Agent
-Change_Pass
+#Zabbix_Agent
+#Change_Pass
