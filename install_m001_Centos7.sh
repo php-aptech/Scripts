@@ -53,6 +53,7 @@ useradd tech
 cd /home/tech
 mkdir .ssh
 touch .ssh/authorized_keys
+chown tech.tech -R /home/tech
 chmod 700 .ssh
 chmod 600 .ssh/authorized_keys
 # Coppy Key ssh
