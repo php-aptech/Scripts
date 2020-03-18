@@ -1,11 +1,11 @@
 Protocol 2
-ListenAddress 0.0.0.0:3122
+ListenAddress 0.0.0.0:7722
 HostKey /etc/ssh/ssh_host_rsa_key
 #HostKey /etc/ssh/ssh_host_dsa_key
 SyslogFacility AUTHPRIV
 LogLevel INFO
 LoginGraceTime 2m
-AllowUsers root
+AllowUsers root tech
 PermitRootLogin yes
 #PermitRootLogin without-password
 StrictModes yes
